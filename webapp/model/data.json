@@ -1,0 +1,15 @@
+{
+	"todos": [{
+		"title": "Create todo list",
+		"completedBy": "Thomas",
+		"completed": true
+	}, {
+		"title": "Check off first item on TODO list",
+		"completedBy": "",
+		"completed": false
+	}, {
+		"title": "Realize you've already accomplished 2 todo's today",
+		"completedBy": "",
+		"completed": false
+	}]
+}

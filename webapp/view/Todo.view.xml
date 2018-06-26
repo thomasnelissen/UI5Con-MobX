@@ -1,0 +1,30 @@
+<mvc:View controllerName="org.ui5con.todo.TodoList.controller.Todo" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<subHeader>
+					<Toolbar>
+						<Input id="inputText" submit="onAddTodo" type="Text" value="" placeholder="Add new todo ..."/>
+						<Button icon="sap-icon://add" press="onAddTodo"/>
+					</Toolbar>
+				</subHeader>
+				<content>
+					<List id="TodoList" items="{todo>/todos}">
+						<StandardListItem title="{todo>title}"
+							description="{todo>completedText}" press="onToggleTodo"
+							type="Active" icon="{todo>icon}" iconDensityAware="false" iconInset="false"/>
+					</List>
+					<HBox justifyContent="Center">
+						<Text text="Total: {todo>/total}, Open: {todo>/open}" id="totals" class="sapUiSmallMarginTop big"/>
+					</HBox>
+				</content>
+				<footer>
+					<Toolbar>
+						<Text text="ui5Con 2018 - Reactive programming in SAPUI5 using MobX"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
